@@ -5,6 +5,7 @@ let arregloNombres: string[] = new Array(tamanio);
 let arregloEdad: number[] = new Array(tamanio);
 let arregloAltura: number[] = new Array(tamanio);
 //se cargan los datos de los 3 arreglos, los nombres se ingresan, y las edades y alturas aleatorias
+
 function cargarDatos() {
   for (let indice: number = 0; indice < tamanio; indice++) {
     arregloNombres[indice] = String(
@@ -13,6 +14,7 @@ function cargarDatos() {
     arregloEdad[indice] = Math.floor(Math.random() * (60 - 20) + 20);
     arregloAltura[indice] = Math.floor(Math.random() * (200 - 120) + 120);
     console.log(arregloNombres[indice]);
+    
     console.log("La edad ingresada es " + arregloEdad[indice]"años");
     console.log("La altura ingresada es " + arregloAltura[indice]"cm");
   }
@@ -28,6 +30,7 @@ function swap(array: any[], i: number, j: number) {
 function ordenamiento() {
   for (let i: number = 0; i < arregloEdad.length; i++) {
     for (let j: number = 0; j < arregloEdad.length; j++) {
+      
       if (arregloEdad[j] > arregloEdad[j + 1]) {
         swap(arregloEdad, j, j + 1);
         swap(arregloNombres, j, j + 1);
